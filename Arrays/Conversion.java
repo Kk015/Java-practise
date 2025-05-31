@@ -1,7 +1,9 @@
+package Arrays;
+
 import java.util.Arrays;
 
 @SuppressWarnings("unused")
-public class Main {
+public class Conversion {
 
 	public static int bintodeci(int num) {
 		int ans = 0;
