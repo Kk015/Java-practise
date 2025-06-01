@@ -9,7 +9,6 @@ public class Maxsubarray {
         for (int i = 1; i < prefix.length; i++) {
             prefix[i] = prefix[i - 1] + nums[i];
         }
-
         for (int i = 0; i < nums.length; i++) {
             for (int j = i; j < prefix.length; j++) {
                 currsum = i == 0 ? prefix[j] : prefix[j] - prefix[i];
@@ -39,9 +38,20 @@ public class Maxsubarray {
 
     }
 
+    public static void kadane(int[] nums) {
+        int sum = nums[0];
+        int max = nums[0];
+        for (int i = 1; i < nums.length; i++) {
+            sum = Math.max(nums[i], sum + nums[i]);
+            max = Math.max(max, sum);
+        }
+        System.out.println(max);
+    }
+
     public static void main(String[] args) {
         int[] nums = { 1, -2, 6, -1, 3 };
         // bruteforce(nums);
-        prefixmethod(nums);
+        // prefixmethod(nums);
+        kadane(nums);
     }
 }
