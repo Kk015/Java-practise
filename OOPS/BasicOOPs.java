@@ -9,7 +9,6 @@ public class BasicOOPs {
         System.out.println(pen1.tip);
 
         BankAccount k1 = new BankAccount();
-        BankAccount k2 = new BankAccount();
         k1.username = "Kunal";
         k1.setPass("frefde");
         k1.getPass();
