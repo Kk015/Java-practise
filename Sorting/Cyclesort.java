@@ -1,6 +1,8 @@
+package Sorting;
+
 import java.util.Arrays;
 
-public class Main {
+public class Cyclesort {
 
     static void swap(int[] nums, int first, int second) {
         int temp = nums[first];
